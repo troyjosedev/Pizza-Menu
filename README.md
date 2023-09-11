@@ -1,8 +1,34 @@
-# React + Vite
+# Pizza Menu App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple React-based web application for a fictional pizza restaurant, "Fast React Pizza Co." It demonstrates the use of React props, JSX rendering, lists, destructuring, and fragments.
 
-Currently, two official plugins are available:
+## Overview
+Fast React Pizza Co. displays a pizza menu, allowing users to view pizza options, check their availability, and learn about the restaurant's opening hours.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Key Concepts
+- **Props**: The `Pizza` component uses props to display pizza details such as name, ingredients, price, and availability.
+
+- **JSX Rendering**: JSX is used to create dynamic UI elements, rendering pizza items and restaurant information.
+
+- **Lists**: The menu dynamically renders a list of pizzas using `map` to iterate over the `pizzaData` array.
+
+- **Destructuring**: Object destructuring is used to extract pizza properties for rendering in the `Pizza` component.
+
+- **Fragments**: Fragments (`<>...</>`) are used to group multiple JSX elements without introducing extra nodes in the DOM.
+
+## Components
+- **App**: The main component rendering the header, menu, and footer.
+
+- **Header**: Displays the restaurant's name.
+
+- **Menu**: Renders the pizza menu items.
+
+- **Pizza**: Represents an individual pizza item, accepting pizza details as props.
+
+- **Footer**: Displays the restaurant's opening hours.
+
+## Deployment
+The application is deployed on Netlify and can be accessed [here](https://pizza-menu-by-troy.netlify.app/).
+
+Feel free to explore the code and understand how props, rendering, lists, destructuring, and fragments are used in this simple React application.
+
