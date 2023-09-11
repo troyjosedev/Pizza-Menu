@@ -47,7 +47,7 @@ const pizzaData = [
 
 function Menu() {
   const pizzas = pizzaData;
-  // const pizzas = [];
+
   const numPizzas = pizzas.length;
   return (
     <main className="menu">
@@ -68,33 +68,18 @@ function Menu() {
       ) : (
         <p>We're still working on our menu. Please come back later :)</p>
       )}
-
-      {/* <Pizza
-        name="Pizza Spinaci"
-        ingredient="Tomato, mozarella, spinach, and ricotta cheese"
-        photoName="pizzas/spinaci.jpg"
-        price={10}
-      />
-      <Pizza
-        name="Pizza Funghi"
-        ingredient="Tomato, mushroom"
-        photoName="pizzas/funghi.jpg"
-        price={12}
-      /> */}
     </main>
   );
 }
 
 function Pizza({ pizzaObj }) {
-  // if (pizzaObj.soldOut) return null;
-
   return (
     <li className={`pizza ${pizzaObj.soldOut ? "sold-out" : ""}`}>
       <img src={pizzaObj.photoName} alt={pizzaObj.name} />
       <div>
         <h3>{pizzaObj.name}</h3>
         <p>{pizzaObj.ingredients}</p>
-        {/* <span>{pizzaObj.soldout ? "SOLD OUT" : pizzaObj.price}</span> */}
+
         <span>{pizzaObj.soldOut ? "SOLD OUT" : pizzaObj.price}</span>
       </div>
     </li>
@@ -112,7 +97,6 @@ function App() {
 }
 
 function Header() {
-  // const style = { color: "red", fontSize: "48px", textTransform: "uppercase" };
   const style = {};
   return (
     <header className="header">
@@ -127,16 +111,6 @@ function Footer() {
   const openHour = 0;
   const closeHour = 22;
   const isOpen = hour >= openHour && hour <= closeHour;
-  console.log(isOpen);
-  // if (hour >= openHour && hour <= closeHour) alert("We're currently open!");
-  // else alert("Sorry we're closed");
-
-  // if(!isOpen)
-  // return (
-  //   <p>
-  //   We're happy to welcome you between {openHour}:00 and {closeHour}:00
-  // </p>
-  // )
 
   return (
     <footer className="footer">
@@ -149,7 +123,6 @@ function Footer() {
       )}
     </footer>
   );
-  // return React.createElement("footer", null, "We're currently open");
 }
 
 function Order({ closeHour, openHour }) {
